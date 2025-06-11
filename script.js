@@ -1,6 +1,6 @@
     // Initialize EmailJS
     (function () {
-        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+        emailjs.init("u-y4pKxEbZxEUr7VP");
     })();
 
     // Mobile Navigation Toggle
@@ -189,7 +189,7 @@
             message: message
         };
 
-        emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, templateParams)
+        emailjs.send("service_e5fiifg", "template_14g40yb", templateParams)
             .then(() => {
                 alert("Thank you for your message! I'll get back to you soon.");
                 form.reset();
