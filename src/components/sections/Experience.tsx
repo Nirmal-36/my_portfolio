@@ -4,14 +4,23 @@ import { Briefcase, GraduationCap, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { experienceTimeline } from "@/data/portfolio";
 
-const experiences = experienceTimeline.map((exp, i) => ({
-  id: i + 1,
-  role: exp.title,
-  company: exp.organization,
-  period: exp.date,
-  description: exp.description,
-  icon: <exp.icon className="w-5 h-5 text-white" />
-}));
+// Keep the newest entries at the top of the timeline. Dates may be ranges
+// (for example, "2023 - Present") or labels such as "2026 (Expected)".
+const getStartYear = (period: string) => {
+  const year = period.match(/\d{4}/)?.[0];
+  return year ? Number(year) : 0;
+};
+
+const experiences = experienceTimeline
+  .map((exp, i) => ({
+    id: i + 1,
+    role: exp.title,
+    company: exp.organization,
+    period: exp.date,
+    description: exp.description,
+    icon: <exp.icon className="w-5 h-5 text-white" />
+  }))
+  .sort((a, b) => getStartYear(b.period) - getStartYear(a.period));
 
 export function Experience() {
   const [expandedId, setExpandedId] = useState<number | null>(1);
