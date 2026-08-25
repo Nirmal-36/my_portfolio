@@ -19,18 +19,6 @@ import oneboxImage from "../data/images/OneMail_thumbnail.png";
 import KLHMedcareImage from "../data/images/KLH_Medcare_thumbnail.png";
 import StockMarketAnalysisImage from "../data/images/Stock_Market_Analysis_thumbnail.png";
 
-export const personalInfo = {
-  name: "Nirmal Madhunala",
-  title: "Full Stack Developer",
-  shortBio:
-    "I build scalable and user-friendly digital experiences.",
-  email: "your-email@example.com",
-  phone: "",
-  location: "Hyderabad, India",
-  github: "https://github.com/Nirmal-36",
-  linkedin: "https://www.linkedin.com/",
-};
-
 
 export const personalInfo = {
   name: import.meta.env.VITE_PERSONAL_NAME || "Nirmal Madhunala",
