@@ -20,18 +20,37 @@ import KLHMedcareImage from "../data/images/KLH_Medcare_thumbnail.png";
 import StockMarketAnalysisImage from "../data/images/Stock_Market_Analysis_thumbnail.png";
 
 export const personalInfo = {
-  name: import.meta.env.VITE_PERSONAL_NAME,
-  title: import.meta.env.VITE_PERSONAL_TITLE,
-  shortBio: import.meta.env.VITE_SHORT_BIO,
-  email: import.meta.env.VITE_EMAIL,
-  phone: import.meta.env.VITE_PHONE,
-  location: import.meta.env.VITE_LOCATION,
-  github: import.meta.env.VITE_GITHUB_URL,
-  linkedin: import.meta.env.VITE_LINKEDIN_URL,
+  name: "Nirmal Madhunala",
+  title: "Full Stack Developer",
+  shortBio:
+    "I build scalable and user-friendly digital experiences.",
+  email: "your-email@example.com",
+  phone: "",
+  location: "Hyderabad, India",
+  github: "https://github.com/Nirmal-36",
+  linkedin: "https://www.linkedin.com/",
+};
+
+
+export const personalInfo = {
+  name: import.meta.env.VITE_PERSONAL_NAME || "Nirmal Madhunala",
+  title: import.meta.env.VITE_PERSONAL_TITLE || "Software Engineer",
+  shortBio:
+    import.meta.env.VITE_SHORT_BIO ||
+    "I build scalable and user-friendly digital experiences.",
+  email: import.meta.env.VITE_EMAIL || "mnirmal2709@gmail.com",
+  phone: import.meta.env.VITE_PHONE || "+91 6302951689",
+  location: import.meta.env.VITE_LOCATION || "Hyderabad, India",
+  github:
+    import.meta.env.VITE_GITHUB_URL ||
+    "https://github.com/Nirmal-36",
+  linkedin:
+    import.meta.env.VITE_LINKEDIN_URL ||
+    "https://www.linkedin.com/in/nirmal-madhunala/",
 };
 
 export const stats = [
-  { label: "CGPA (B.Tech)", value: "9.95/10.0" },
+  { label: "CGPA (B.Tech)", value: "9.96/10.0" },
   { label: "Projects Completed", value: "8+" },
   { label: "Technologies", value: "15+" },
   { label: "Certifications", value: "6+" },
@@ -145,7 +164,7 @@ export const educationData = [
     title: "B.Tech. in Computer Science and Engineering",
     organization: "KL University, Hyderabad",
     date: "2023 - Present",
-    description: "CGPA: 9.95/10.0. Recognized with Academic Excellence Award (Ranked 1st in CS Department).",
+    description: "CGPA: 9.96/10.0. Recognized with Academic Excellence Award (Ranked 1st in CS Department).",
     icon: Code2
   },
   {
